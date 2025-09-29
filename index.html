@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime Requester</title>
 </head>
+
 <body>
     <header>
-        
+        <form action="">
+            <ul>
+                <li>
+                    <label for="type">Choississez un type de recherche&nbsp</label>
+                    <select id="select_type">
+                        <option value="1">Recherche par titre</option>
+                        <option value="2">Recherche par rang</option>
+                        <option value="3">Recherche par id</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="parametre">Paramètre&nbsp</label>
+                    <textarea id="motclef"></textarea>
+                </li>
+            </ul>
+        </form>
+        <button>Rechercher</button>
+        <button>Effacer</button>
     </header>
 </body>
+
 </html>
