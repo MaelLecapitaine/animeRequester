@@ -1,0 +1,7 @@
+button {
+    background-color: blue;
+    color: white;
+    width: 120px;
+    display: inline;
+    justify-content: space-around;
+}
