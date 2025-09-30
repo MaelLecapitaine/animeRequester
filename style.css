@@ -5,7 +5,7 @@ button {
     display: inline;
     justify-content: space-around;
     align-items: center;
-    margin: 10px;
+    margin: 5px;
 }
 header{
     background-color: lightgray;
@@ -14,5 +14,5 @@ header{
 
 textarea{
     height: 1em;
-    width: auto;
+    width: 130px;
 }
