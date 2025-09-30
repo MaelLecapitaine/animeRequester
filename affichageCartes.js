@@ -276,11 +276,11 @@ function afficherCartes(jsonAnime) {
         card.appendChild(synopsis);
 
         const genres = document.createElement('p');
-        genres.textContent = "Genres : " + anime.genres;
+        genres.innerHTML = '<i class="fa-solid fa-palette"></i> Genres : ' + anime.genres.join(", ");
         card.appendChild(genres);
 
         const ranking = document.createElement('p');
-        ranking.textContent = "Ranking : " + anime.ranking;
+        ranking.innerHTML = '<i class="fa-solid fa-ranking-star"></i> Ranking : ' + anime.ranking;
         card.appendChild(ranking);
 
         const episode = document.createElement('p');
