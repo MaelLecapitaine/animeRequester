@@ -4,4 +4,15 @@ button {
     width: 120px;
     display: inline;
     justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+header{
+    background-color: lightgray;
+    padding: 10px;
+}
+
+textarea{
+    height: 1em;
+    width: auto;
 }
