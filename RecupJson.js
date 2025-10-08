@@ -29,9 +29,9 @@
 
 //Demande Clé API de l'utilisateur
 
-localStorage.setItem("clefAPI",prompt("Entrée clé API",""));
+const API_KEY = localStorage.setItem("clefAPI",prompt("Entrée clé API",""));
 
-const API_KEY = clefAPI
+const API_KEY = localStorage.getItem("clefAPI")
 const url='https://anime-db.p.rapidapi.com/anime?page=1&size=10&search='+ "tokyo" +'&sortBy=ranking&sortOrder=asc'
 
 async function getByName(titre) {
