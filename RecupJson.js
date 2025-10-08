@@ -43,6 +43,6 @@ async function getByName(titre) {
 }
 
 getByName('My Hero Academia')
-.then(data => console.log('.then:', data['data'][0]));
+.then(data => console.log('.then:', data['data']));
 
 //getBy
