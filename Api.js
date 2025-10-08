@@ -24,7 +24,7 @@ else if(titre == null && genres != null){
     xhr.open('GET', 'https://anime-db.p.rapidapi.com/anime?page=1&size=10&genres='+ genres +'&sortBy=ranking&sortOrder=asc');
 }
 
-xhr.setRequestHeader('x-rapidapi-key', '04335e7f5cmshf46b5a783eaa1dep1b6fabjsn8dcb23c9ceb0');
+xhr.setRequestHeader('x-rapidapi-key', 'clefAPI');
 xhr.setRequestHeader('x-rapidapi-host', 'anime-db.p.rapidapi.com');
 
 xhr.send(data);
