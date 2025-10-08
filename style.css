@@ -1,5 +1,5 @@
 
-button {
+.buttonFormulaire{
     background-color: blue;
     color: white;
     width: 120px;
@@ -16,7 +16,7 @@ header{
 
 textarea{
     height: 1em;
-    width: 130px;
+    width: 50%;
 }
 
 #cards {
