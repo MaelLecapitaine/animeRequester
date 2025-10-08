@@ -27,7 +27,11 @@
 //const API_KEY = 'e4b24267d8msh867b305ac429e47p1d21dejsnca24c7455727';
 //Requete Par nom
 
-const API_KEY = '4f7f0bb779mshb4d344d6c35a13dp154c5ejsn86604b0965ff'
+//Demande Clé API de l'utilisateur
+
+localStorage.setItem("clefAPI",prompt("Entrée clé API",""));
+
+const API_KEY = clefAPI
 const url='https://anime-db.p.rapidapi.com/anime?page=1&size=10&search='+ "tokyo" +'&sortBy=ranking&sortOrder=asc'
 
 async function getByName(titre) {
