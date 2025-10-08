@@ -44,12 +44,5 @@ async function getByName(titre) {
 
 getByName('My Hero Academia')
 .then(data => console.log('.then:', data['data'][0]));
-//const dataResolve = Promise.resolve();
-/* const json = */
-//     .then(data => {
-//         console.log(data);
-//         console.log(data.fieldName);
-//     })
-//     .catch(err => console.error(err));
 
-// console.log(json);
+//getBy
