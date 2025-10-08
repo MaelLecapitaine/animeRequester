@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime Requester</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="header.js"></script>
+
 </head>
+
 <body>
     <header>
         <button id="BoutonDarkMode" type ="button">Activez <label id="mode">dark</label> mode</button>
+        <form action="">
+            <ul>
+                <li>
+                    <label for="type">Recherche par : </label>
+                    <select id="select_type">
+                        <option value="1">Titre</option>
+                        <option value="2">Rang</option>
+                        <option value="3">Id</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="parametre">Paramètre : </label>
+                    <textarea id="motclef"></textarea>
+                </li>
+            </ul>
+        </form>
+        <button class="buttonFormulaire" id="buttonRecherche">Rechercher</button>
+        <button class="buttonFormulaire" id="buttonReset">Effacer</button>
     </header>
     <div id = "cards"> 
     </div>
     <script src="affichageCartes.js"></script>
     <script src="https://kit.fontawesome.com/3d8fdb5aea.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

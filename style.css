@@ -1,9 +1,30 @@
+
+.buttonFormulaire{
+    background-color: blue;
+    color: white;
+    width: 120px;
+    display: inline;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+}
+
+header{
+    background-color: lightgray;
+    padding: 10px;
+}
+
+textarea{
+    height: 1em;
+    width: 50%;
+}
+
 #cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
     gap: 20px; 
     padding: 20px;
 }
+
 
 body{
     background-color: white;
@@ -20,7 +41,11 @@ body{
     color: black;
 }
 
-
+@media screen and (min-width: 800px) {
+    #cards {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
 .card {
     background: #fff;
     border-radius: 12px;
