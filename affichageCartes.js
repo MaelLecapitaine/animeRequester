@@ -253,8 +253,35 @@ let tableauAnime = [
       "type": "Special"
     }
   ];
+sessionStorage.setItem("mode","light");
+const boutonMode = document.getElementById("BoutonDarkMode");
 
-// fonction pour afficher les cartes deux par colonne :
+  boutonMode.addEventListener('click', (event) => {
+    if (sessionStorage.getItem("mode") === "dark"){
+      activezLightMode();
+      sessionStorage.setItem("mode","light");
+    }
+    else {
+      activezDarkMode();
+      sessionStorage.setItem("mode","dark")
+    }
+  }
+);
+
+function activezLightMode(){
+  var element = document.body;
+  element.classList.toggle("light-mode");
+  var element2 = document.cards;
+  element2.classList.toggle("card-light-mode");
+}
+
+function activezDarkMode(){
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+  var element2 = document.cards;
+  element2.classList.toggle("card-dark-mode");
+}
+// fonction pour afficher les Cartes des animés avec leur titre, image, synopsis etc...
 function afficherCartes(jsonAnime) {
     const container = document.getElementById('cards');
     container.innerHTML = '';
@@ -284,7 +311,7 @@ function afficherCartes(jsonAnime) {
         card.appendChild(ranking);
 
         const episode = document.createElement('p');
-        episode.textContent = "Episodes : " + anime.episodes;
+        episode.innerHTML = '<i class="fa-solid fa-film"></i> Episodes : ' + anime.episodes;
         card.appendChild(episode);
 
         container.appendChild(card);
