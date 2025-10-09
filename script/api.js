@@ -78,6 +78,21 @@ export async function getByName(titref, API_K) {
             'x-rapidapi-host': 'anime-db.p.rapidapi.com'
         }
     });
+    return res.json();
+}
+
+export async function getById(id, API_K) {
+    if (id != null) {
+        xhr.open('GET', 'https://anime-db.p.rapidapi.com/anime/by-id/' + id);
+    }
+
+    const res = await fetch('https://anime-db.p.rapidapi.com/anime/by-id/' + id, {
+        method: 'GET',
+        headers: {
+            'x-rapidapi-key': API_K,
+            'x-rapidapi-host': 'anime-db.p.rapidapi.com'
+        }
+    });
     console.log(res.json);
     return res.json();
 }

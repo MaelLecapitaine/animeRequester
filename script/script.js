@@ -1,4 +1,4 @@
-import { getByName } from './api.js'
+import { getByName, getById } from './api.js'
 import { afficherCartes,getMotClef,getTypeRecherche} from './graphique.js'
 
 
@@ -15,11 +15,21 @@ const buttonRecherche = document.getElementById("buttonRecherche");
 
 buttonRecherche.addEventListener('click', () => {
     if(getTypeRecherche() == 'id') {
-        //TO DO
+        getById(getMotClef(),API_KEY)
+        .then(data =>{
+            console.log(data);
+            afficherCartes([data]);
+            return data
+        });
+
     } else if (getTypeRecherche() == 'rang') {
         //TO DO
     } else if (getTypeRecherche() == 'titre') {
-        getByName(getMotClef(),API_KEY).then(data =>{afficherCartes(data['data']);return data['data']});
+        getByName(getMotClef(),API_KEY)
+        .then(data =>{
+            afficherCartes(data['data']);
+            return data['data']
+        });
     }
 });
 
