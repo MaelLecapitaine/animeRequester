@@ -43,10 +43,11 @@ async function getByName(titre) {
 }
 
 getByName('My Hero Academia')
-.then(data => console.log('.then:', data['data']));
+.then(data => {console.log(data['data']); return data['data']});
+
 
 async function getById(id) {
-    const res = await fetch('https://anime-db.p.rapidapi.com/anime/by-id/1', {
+    const res = await fetch('https://anime-db.p.rapidapi.com/anime/by-id/' + id, {
         method: 'GET',
         headers: {
             'x-rapidapi-key': API_KEY,
@@ -56,3 +57,6 @@ async function getById(id) {
     console.log(res.json);
     return res.json();
 }
+
+getById('845')
+.then(data => console.log('.then:', data));
