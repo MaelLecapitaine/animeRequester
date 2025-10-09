@@ -253,9 +253,11 @@ let tableauAnime = [
       "type": "Special"
     }
   ];
+
 sessionStorage.setItem("mode","light");
 const boutonMode = document.getElementById("BoutonDarkMode");
 
+// Listener qui switch entre light et dark mode
   boutonMode.addEventListener('click', (event) => {
     if (sessionStorage.getItem("mode") === "dark"){
       activezLightMode();
@@ -281,6 +283,7 @@ function activezDarkMode(){
   var element2 = document.cards;
   element2.classList.toggle("card-dark-mode");
 }
+
 // fonction pour afficher les Cartes des animés avec leur titre, image, synopsis etc...
 function afficherCartes(jsonAnime) {
     const container = document.getElementById('cards');
