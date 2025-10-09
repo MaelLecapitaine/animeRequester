@@ -12,7 +12,7 @@ function reset() {
 }
 
 export function getMotClef() {
-    return barreRecherche.textContent;
+    return barreRecherche.value;
 }
 
 export function getTypeRecherche() {
