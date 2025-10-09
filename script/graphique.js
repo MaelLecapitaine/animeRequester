@@ -1,4 +1,13 @@
-// création d'un tableau de json pour tester : 
+const buttonReset = document.getElementById("buttonReset");
+
+
+//Boutton effacer : retourne au stade de base de la page
+buttonReset.addEventListener('click', reset);
+
+function reset() {
+    window.location.reload(true)
+}
+
 // fonction pour afficher les cartes deux par colonne :
 export function afficherCartes(jsonAnime) {
     const container = document.getElementById('cards');
@@ -11,7 +20,7 @@ export function afficherCartes(jsonAnime) {
         const title = document.createElement('h3');
         title.textContent = anime.title;
         card.appendChild(title);
-        
+
         const img = document.createElement('img');
         img.src = anime.image;
         img.alt = anime.title;
@@ -36,5 +45,3 @@ export function afficherCartes(jsonAnime) {
         container.appendChild(card);
     });
 }
-
-//afficherCartes(tableauAnime);
