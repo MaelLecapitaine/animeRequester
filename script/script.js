@@ -6,7 +6,6 @@ localStorage.setItem("clefAPI", prompt("Entrée clé API", ""));
 const API_KEY = localStorage.getItem("clefAPI")
 
 
-// API();
 let tableauAnime;
 let data;
 
