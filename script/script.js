@@ -1,4 +1,4 @@
-import { getByName, getById } from './api.js'
+import { getByName, getById, getByRang } from './api.js'
 import { afficherCartes,getMotClef,getTypeRecherche} from './graphique.js'
 
 
@@ -22,7 +22,11 @@ buttonRecherche.addEventListener('click', () => {
         });
 
     } else if (getTypeRecherche() == 'rang') {
-        //TO DO
+        getByRang(getMotClef(),API_KEY)
+        .then(data =>{
+            afficherCartes([data]);
+            return data
+        });
     } else if (getTypeRecherche() == 'titre') {
         getByName(getMotClef(),API_KEY)
         .then(data =>{
