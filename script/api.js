@@ -34,7 +34,29 @@
 //const url='https://anime-db.p.rapidapi.com/anime?page=1&size=10&search='+ "tokyo" +'&sortBy=ranking&sortOrder=asc'
 
 let titre = null;
-let genres = null;
+let genres = [
+    'Award Winning',
+    'Action',
+    'Suspense',
+    'Horror',
+    'Ecchi',
+    'Avant Garde',
+    'Sports',
+    'Supernatural',
+    'Fantasy',
+    'Gourmet',
+    'Boys Love',
+    'Drama',
+    'Comedy',
+    'Mystery',
+    'Girls Love',
+    'Slice of Life',
+    'Adventure',
+    'Romance',
+    'Sci-Fi',
+    'Erotica',
+    'Hentai'
+];
 let id = null;
 
 const data = null;
@@ -67,7 +89,7 @@ export function API(API_K) {
 export async function getByName(titref, API_K) {
 
 
-    if (titref != null && genres == null) {
+    if (titref != null) {
         xhr.open('GET', 'https://anime-db.p.rapidapi.com/anime?page=1&size=10&search=' + titref + '&sortBy=ranking&sortOrder=asc');
     }
 
@@ -97,4 +119,30 @@ export async function getById(id, API_K) {
     return res.json();
 }
 
-//getBy
+export async function getByGenre(genresSelec, API_K) {
+    if (genresSelec != null) {
+        xhr.open('GET', 'https://anime-db.p.rapidapi.com/anime/by-id/' + id);
+    }
+
+    let StringGenres = "";
+    let first = 1;
+
+    genresSelec.forEach(element => {
+        if (first){
+            StringGenres += element;
+            first = 0;
+        }
+        StringGenres += ( ',' + element);
+    });
+
+    const res = await fetch('https://anime-db.p.rapidapi.com/anime?page=1&size=10&search=Fullmetal&genres=' + StringGenres 
+                            + '&sortBy=ranking&sortOrder=asc', {
+        method: 'GET',
+        headers: {
+            'x-rapidapi-key': API_K,
+            'x-rapidapi-host': 'anime-db.p.rapidapi.com'
+        }
+    });
+    console.log(res.json);
+    return res.json();
+}

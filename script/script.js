@@ -1,10 +1,9 @@
-import { getByName, getById } from './api.js'
-import { afficherCartes,getMotClef,getTypeRecherche} from './graphique.js'
+import { getByName, getById, getByGenre } from './api.js'
+import { afficherCartes,getGenreRecherche,getMotClef,getTypeRecherche} from './graphique.js'
 
 
 localStorage.setItem("clefAPI", prompt("Entrée clé API", ""));
 const API_KEY = localStorage.getItem("clefAPI")
-
 
 // API();
 let tableauAnime;
@@ -30,6 +29,14 @@ buttonRecherche.addEventListener('click', () => {
             afficherCartes(data['data']);
             return data['data']
         });
+    } else if (getTypeRecherche() == 'genre') {
+        getByGenre(getGenreRecherche(),API_KEY)
+        .then(data =>{
+            afficherCartes(data['data']);
+            return data['data']
+        });
     }
 });
 
+// getByGenre(['Horror'],API_KEY)
+// .then(data => console.log(data));
