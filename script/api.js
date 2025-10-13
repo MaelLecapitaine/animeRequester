@@ -1,38 +1,6 @@
-//Création du tableau des genres
 
 // //const API_KEY = '04335e7f5cmshf46b5a783eaa1dep1b6fabjsn8dcb23c9ceb0';
 // const API_KEY = 'e4b24267d8msh867b305ac429e47p1d21dejsnca24c7455727';
-// let tabGenre = "";
-
-// async function getGenres() {
-//     const res = await fetch('https://anime-db.p.rapidapi.com/genre', {
-//         method: 'GET',
-//         headers: {
-//             'x-rapidapi-key': API_KEY,
-//             'x-rapidapi-host': 'anime-db.p.rapidapi.com'
-//         }
-//     });
-//     if (!res.ok) throw new Error('HTTP error ' + res.status);
-//     return await res.json(); 
-// }
-
-// getGenres()
-//     .then(dataGenre => {
-//         console.log(dataGenre);
-//         if (Array.isArray(dataGenre) && dataGenre[1]) {
-//             console.log(dataGenre[1]._id);
-//         }
-//     })
-
-//const API_KEY = '';
-//Requete Par nom
-
-//Demande Clé API de l'utilisateur
-
-
-//const API_KEY = localStorage.getItem("clefAPI")
-//const url='https://anime-db.p.rapidapi.com/anime?page=1&size=10&search='+ "tokyo" +'&sortBy=ranking&sortOrder=asc'
-
 let titre = null;
 let genres = null;
 let id = null;
@@ -46,7 +14,6 @@ export function API(API_K) {
 
     xhr.addEventListener('readystatechange', function () {
         if (this.readyState === this.DONE) {
-            console.log(this.responseText);
         }
     });
 
@@ -78,7 +45,6 @@ export async function getByName(titref, API_K) {
             'x-rapidapi-host': 'anime-db.p.rapidapi.com'
         }
     });
-    console.log(res.json);
     return res.json();
 }
 

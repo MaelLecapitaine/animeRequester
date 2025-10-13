@@ -1,12 +1,33 @@
 const buttonReset = document.getElementById("buttonReset");
 const barreRecherche = document.getElementById("motclef");
 const select_type = document.getElementById("select_type");
+var LightMode = true;
 
 
-
+let buttonDarkMode = document.getElementById("buttonDarkMode");
 //Boutton effacer : retourne au stade de base de la page
 buttonReset.addEventListener('click', reset);
 
+buttonDarkMode.addEventListener('click',changerMode);
+
+function changerMode(){
+    let link = document.querySelector("link[rel='stylesheet'");
+    if (LightMode){
+        link.href = 'style/styleDarkMode.css';
+        LightMode = false;
+    }
+    else {
+        link.href = 'style/styleLightMode.css';
+        LightMode = true;
+    }
+    document.body.classList.toggle('dark-mode');
+    // Change le texte du bouton en fonction du mode
+    if (document.body.classList.contains('dark-mode')) {
+        buttonDarkMode.textContent = "Désactivez le dark mode";
+    } else {
+        buttonDarkMode.textContent = "Activez le dark mode";
+    }
+}
 function reset() {
     window.location.reload(true)
 }
@@ -23,7 +44,6 @@ export function getTypeRecherche() {
 export function afficherCartes(jsonAnime) {
     const container = document.getElementById('cards');
     container.innerHTML = '';
-    console.log(jsonAnime);
     jsonAnime.forEach(anime => {
         const card = document.createElement('div');
         card.className = 'card';
@@ -50,9 +70,10 @@ export function afficherCartes(jsonAnime) {
         card.appendChild(ranking);
 
         const episode = document.createElement('p');
-        episode.textContent = "Episodes : " + anime.episodes;
+        episode.innerHTML = '<i class="fa-solid fa-film"></i> Episodes : ' + anime.episodes;
         card.appendChild(episode);
 
         container.appendChild(card);
     });
 }
+
