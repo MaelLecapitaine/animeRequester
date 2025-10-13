@@ -2,8 +2,6 @@ const buttonReset = document.getElementById("buttonReset");
 const barreRecherche = document.getElementById("motclef");
 const select_type = document.getElementById("select_type");
 
-
-
 //Boutton effacer : retourne au stade de base de la page
 buttonReset.addEventListener('click', reset);
 
@@ -16,7 +14,7 @@ export function getMotClef() {
 }
 
 export function getTypeRecherche() {
-    return select_type.value; 
+    return select_type.value;
 }
 
 // fonction pour afficher les cartes deux par colonne :
