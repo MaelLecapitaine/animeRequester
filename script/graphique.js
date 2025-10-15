@@ -60,7 +60,7 @@ export function getGenreRecherche(){
         "Slice of Life",
         "Adventure",
         "Romance",
-        "SciFi",
+        "Sci-Fi",
         "Erotica",
         "Hentai"
     ];
