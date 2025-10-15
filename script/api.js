@@ -1,4 +1,3 @@
-//Création du tableau des genres
 
 //'04335e7f5cmshf46b5a783eaa1dep1b6fabjsn8dcb23c9ceb0';
 //'e4b24267d8msh867b305ac429e47p1d21dejsnca24c7455727';
