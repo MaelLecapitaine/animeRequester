@@ -65,11 +65,35 @@ export function getGenreRecherche(){
         "Hentai"
     ];
 
+    let DicoGenres = new Map();
+    DicoGenres.set("Award_Winning", "Award Winning");
+    DicoGenres.set("Action", "Action");
+    DicoGenres.set("Suspense", "Suspense");
+    DicoGenres.set("Horror", "Horror");
+    DicoGenres.set("Ecchi", "Ecchi");
+    DicoGenres.set("Avant_Garde", "Avant Garde");
+    DicoGenres.set("Sports", "Sports");
+    DicoGenres.set("Supernatural", "Supernatural");
+    DicoGenres.set("Fantasy", "Fantasy");
+    DicoGenres.set("Gourmet", "Gourmet");
+    DicoGenres.set("Boys_Love", "Boys Love");
+    DicoGenres.set("Drama", "Drama");
+    DicoGenres.set("Comedy", "Comedy");
+    DicoGenres.set("Mystery", "Mystery");
+    DicoGenres.set("Girls_Love", "Girls Love");
+    DicoGenres.set("Slice of Life", "Slice of Life");
+    DicoGenres.set("Adventure", "Adventure");
+    DicoGenres.set("Romance", "Romance");
+    DicoGenres.set("Sci-Fi", "Sci-Fi");
+    DicoGenres.set("Erotica", "Erotica");
+    DicoGenres.set("Hentai", "Hentai");
+    
+
     let GenresSelec = [];
     let i = 0;
     genres.forEach(element => {
         if(document.getElementById(element).checked){
-            GenresSelec[i] = element;
+            GenresSelec[i] = DicoGenres.get(element);
             i += 1;
         }
     });
