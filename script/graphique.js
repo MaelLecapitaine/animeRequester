@@ -23,9 +23,9 @@ function changerMode(){
     document.body.classList.toggle('dark-mode');
     // Change le texte du bouton en fonction du mode
     if (document.body.classList.contains('dark-mode')) {
-        buttonDarkMode.innerHTML = '<i class="fa-regular fa-sun"></i> Désactivez le dark mode';
+        buttonDarkMode.innerHTML = '<em class="fa-regular fa-sun"></em> Désactivez le dark mode';
     } else {
-        buttonDarkMode.innerHTML = '<i class="fa-solid fa-moon"></i> Activez le dark mode';
+        buttonDarkMode.innerHTML = '<em class="fa-solid fa-moon"></em> Activez le dark mode';
     }
 }
 function reset() {
@@ -99,15 +99,15 @@ export function afficherCartes(jsonAnime) {
         card.appendChild(synopsis);
 
         const genres = document.createElement('p');
-        genres.innerHTML = '<i class="fa-solid fa-palette"></i> Genres : ' + anime.genres.join(", ");
+        genres.innerHTML = '<em class="fa-solid fa-palette"></em> Genres : ' + anime.genres.join(", ");
         card.appendChild(genres);
 
         const ranking = document.createElement('p');
-        ranking.innerHTML = '<i class="fa-solid fa-ranking-star"></i> Ranking : ' + anime.ranking;
+        ranking.innerHTML = '<em class="fa-solid fa-ranking-star"></em> Ranking : ' + anime.ranking;
         card.appendChild(ranking);
 
         const episode = document.createElement('p');
-        episode.innerHTML = '<i class="fa-solid fa-film"></i> Episodes : ' + anime.episodes;
+        episode.innerHTML = '<em class="fa-solid fa-film"></em> Episodes : ' + anime.episodes;
         card.appendChild(episode);
 
         container.appendChild(card);
