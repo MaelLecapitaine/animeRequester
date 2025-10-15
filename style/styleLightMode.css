@@ -9,6 +9,16 @@
     margin: 5px;
 }
 
+#buttonDarkMode{
+    background: lightblue;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    width: 200px;
+    display: inline;
+    align-items: center;
+    margin: 5px;
+}
+
 header{
     background: #eff;
     border-radius: 12px;
