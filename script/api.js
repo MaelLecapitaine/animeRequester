@@ -34,7 +34,6 @@ export async function getById(id, API_K) {
             'x-rapidapi-host': 'anime-db.p.rapidapi.com'
         }
     });
-    console.log(res.json);
     return res.json();
 }
 
@@ -50,6 +49,5 @@ export async function getByRang(rang, API_K) {
             'x-rapidapi-host': 'anime-db.p.rapidapi.com'
         }
     });
-    console.log(res.json);
     return res.json();
 }
