@@ -2,10 +2,10 @@ import { getByName } from './api.js'
 import { afficherCartes,getMotClef,getTypeRecherche} from './graphique.js'
 
 
-if (localStorage.getItem("clefAPI") === null){
-    localStorage.setItem("clefAPI", prompt("Entrée clé API", ""));
+if (sessionStorage.getItem("clefAPI") === null){
+    sessionStorage.setItem("clefAPI", prompt("Entrée clé API", ""));
 }
-const API_KEY = localStorage.getItem("clefAPI")
+const API_KEY = sessionStorage.getItem("clefAPI");
 
 
 // API();
