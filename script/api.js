@@ -135,7 +135,7 @@ export async function getByGenre(genresSelec, API_K) {
         StringGenres += ( ',' + element);
     });
 
-    const res = await fetch('https://anime-db.p.rapidapi.com/anime?page=1&size=10&search=Fullmetal&genres=' + StringGenres 
+    const res = await fetch('https://anime-db.p.rapidapi.com/anime?page=1&size=10&genres=' + StringGenres 
                             + '&sortBy=ranking&sortOrder=asc', {
         method: 'GET',
         headers: {
