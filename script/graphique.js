@@ -40,6 +40,43 @@ export function getTypeRecherche() {
     return select_type.value;
 }
 
+export function getGenreRecherche(){
+        let genres = [
+        "Award Winning",
+        "Action",
+        "Suspense",
+        "Horror",
+        "Ecchi",
+        "Avant Garde",
+        "Sports",
+        "Supernatural",
+        "Fantasy",
+        "Gourmet",
+        "Boys Love",
+        "Drama",
+        "Comedy",
+        "Mystery",
+        "Girls Love",
+        "Slice of Life",
+        "Adventure",
+        "Romance",
+        "SciFi",
+        "Erotica",
+        "Hentai"
+    ];
+
+    let GenresSelec = [];
+    let i = 0;
+    genres.forEach(element => {
+        if(document.getElementById(element).checked){
+            GenresSelec[i] = element;
+            i += 1;
+        }
+    });
+    console.log(GenresSelec);
+    return GenresSelec;
+}
+
 // fonction pour afficher les cartes deux par colonne :
 export function afficherCartes(jsonAnime) {
     const container = document.getElementById('cards');

@@ -23,7 +23,8 @@ body{
     color: white;
     background-color: rgb(58, 58, 58);
 }
-input{
+
+#motclef{
     height: 1em;
     width: 50%;
 }
