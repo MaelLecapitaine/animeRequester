@@ -1,3 +1,4 @@
+
 .buttonFormulaire{
     background: lightblue;
     border-radius: 12px;
@@ -16,8 +17,7 @@ header{
     padding: 10px;
 }
 
-
-input{
+textarea{
     height: 1em;
     width: 50%;
 }
@@ -62,7 +62,6 @@ input{
     color: #333;
 }
 
-
 .card-title {
     font-size: 1.2rem;
     font-weight: bold;
@@ -75,4 +74,3 @@ input{
     color: #555;
     margin: 10px;
 }
-

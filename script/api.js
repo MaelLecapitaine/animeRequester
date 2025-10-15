@@ -26,6 +26,7 @@ let genres = [
     'Hentai'
 ];
 
+let id = null;
 const xhr = new XMLHttpRequest();
 xhr.withCredentials = true;
 
@@ -85,7 +86,6 @@ export async function getByGenre(genresSelec, API_K) {
             'x-rapidapi-host': 'anime-db.p.rapidapi.com'
         }
     });
-    console.log(res.json);
     return res.json();
 }
 
