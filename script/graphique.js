@@ -23,9 +23,9 @@ function changerMode(){
     document.body.classList.toggle('dark-mode');
     // Change le texte du bouton en fonction du mode
     if (document.body.classList.contains('dark-mode')) {
-        buttonDarkMode.textContent = "Désactivez le dark mode";
+        buttonDarkMode.innerHTML = '<i class="fa-regular fa-sun"></i> Désactivez le dark mode';
     } else {
-        buttonDarkMode.textContent = "Activez le dark mode";
+        buttonDarkMode.innerHTML = '<i class="fa-solid fa-moon"></i> Activez le dark mode';
     }
 }
 function reset() {

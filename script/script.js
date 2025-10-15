@@ -1,5 +1,5 @@
-import { getByName, getById, getByRang } from './api.js'
-import { afficherCartes, getMotClef, getTypeRecherche } from './graphique.js'
+import { getByName, getById, getByGenre, getByRang } from './api.js'
+import { afficherCartes,getGenreRecherche, getMotClef, getTypeRecherche } from './graphique.js'
 
 
 if (sessionStorage.getItem("clefAPI") === null){
@@ -37,11 +37,17 @@ buttonRecherche.addEventListener('click', () => {
                 return data
             });
     } else if (getTypeRecherche() == 'titre') {
-        getByName(getMotClef(), API_KEY)
-            .then(data => {
-                afficherCartes(data['data']);
-                return data['data']
-            });
+        getByName(getMotClef(),API_KEY)
+        .then(data =>{
+            afficherCartes(data['data']);
+            return data['data']
+        });
+    } else if (getTypeRecherche() == 'genre') {
+        getByGenre(getGenreRecherche(),API_KEY)
+        .then(data =>{
+            afficherCartes(data['data']);
+            return data['data']
+        });
     }
 });
 
